@@ -19,6 +19,7 @@ namespace edulab.web
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+            .UseUrls("http://*:5011;http://localhost:5011;")
+            .UseStartup<Startup>();
     }
 }
